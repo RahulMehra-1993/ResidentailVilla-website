@@ -1,7 +1,5 @@
 #ResidentialVilla-website
 
-<img src="./img/siteSS.png" width="100%" >
-
 ##A Tour and travel website to book beautiful villas in the himalayans
 ###Core features of this website
 

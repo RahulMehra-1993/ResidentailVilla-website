@@ -1,4 +1,5 @@
 # ResidentialVilla-website
+
 <<<<<<< HEAD
 
 <img src="./img/siteSS.png" width="100%">
@@ -6,12 +7,6 @@ https://rahulmehra-1993.github.io/ResidentailVilla-website/
 
 ## A Tour and travel website to book beautiful villas in the himalayans.
 
-=======
-<img src="./img/siteSS.png" width="100%">
-https://rahulmehra-1993.github.io/ResidentailVilla-website/
-
-## A Tour and travel website to book beautiful villas in the himalayans.
->>>>>>> 58f814b1fef5df5827f627ffe3a734e1205f12b4
 ### Core features of this website.
 
 > 1.Designing different Sections of the website

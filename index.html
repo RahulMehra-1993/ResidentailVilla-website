@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- website logo -->
+    <link rel="icon" style="size: 192 * 192" href="./img/logo-2.png" />
+    <!-- bootstrap v5  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Residential Villa</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>
+        <div class="navContainer">
+          <div class="logo">
+            <a href="#">
+              <img
+                src="./img/logo-2.png"
+                alt="Logo"
+                style="height: 10rem; width: auto"
+              />
+             
+            </a>
+            <h1>→Residential Villa←</h1>
+          </div>
+          
+          
+          <div class="navList" id="navList">
+            <ul>
+              <li href="#"><a>Contacts</a></li>
+              <li>
+                <a href="#featureSection">Features</a>
+              </li>
+              
+                <li><a href="#videoSection">Video</a></li>
+              
+              
+                <li><a href="#pricingSection">Pricing</a></li>
+              <li><a href="#testimonialSection">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="mobileNav">
+            <div class="navShort"><ion-icon name="list-outline"></ion-icon></div>
+            <div class="navClose hidden">×</div>
+            <div class="navList2 hidden" id="navList2">
+              
+              <ul>
+                <li href="#"><a>Contacts</a></li>
+                <li>
+                  <a href="#featureSection">Features</a>
+                </li>
+                
+                  <li><a href="#videoSection">Video</a></li>
+                
+                
+                  <li><a href="#testimonialSection">Testimonials</a></li>
+                  <li><a href="#pricingSection">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!---Hero--->
+      <section class="heroSection">
+        <div class="hS-container">
+          <div class="hS-container-header">
+            <p>
+              Welcome to our <span class="highlight">Villa</span
+              ><br />Experience luxury in the lap of nature.
+            </p>
+            <div class="animation">
+              <p class="animation-trees">🎄🎄🎄🎄🏠🎄🎄🎄🎄</p>
+
+              <marquee direction="left" class="animation-car">🚗</marquee>
+              <marquee direction="left" class="animation-auto"> 🛺 </marquee>
+            </div>
+          </div>
+          <div class="hS-container-form">
+            <!--bootstrap form-->
+            <form class="row g-2 container formDetails" id="formDetails">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Mobile</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mobile"
+                />
+              </div>
+
+              <div class="col-md-8">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" />
+              </div>
+              <div class="col-md-6">
+                <label for="Premium" class="form-label">Premium</label>
+                <select id="premium" class="form-select">
+                  <option selected>select</option>
+                  <option>₹3500</option>
+                  <option>₹2500</option>
+                  <option>₹2000</option>
+                </select>
+              </div>
+              
+              
+              <div style="margin-top: 3rem;" class="col-md-12 d-grid gap-2">
+                <button type="submit" type="reset" class="btn btn-success">Sign in</button>
+              </div>
+            </form>
+            <div class="formSubmitt hidden"></div>
+            <!---->
+          </div>
+        </div>
+      </section>
+      <!---Feature--->
+      <section class="featureSection" id="featureSection">
+        <div class="fS-container">
+          <div class="fs-container-s1">
+            <div class="fs-container-s1-feature">
+              <h3>ACCOMMODATION</h3>
+              <p>
+                Never measure the height of a mountain until you reach the top<br>
+                We have beautiful villas along with beautiful landscapes
+              </p>
+              <a href="#">
+                <button type="button" class="btn ">
+                  Get the details
+                </button>
+              </a>
+            </div>
+            <div class="fs-container-s1-image">
+              <img src="./img/s1.jpg" rel="hotel view" />
+              <div class="fs-container-s1-image2"></div>
+              <div class="fs-container-s1-image3"></div>
+              <div class="fs-container-s1-image4"></div>
+            </div>
+          </div>
+          <div class="fs-container-s2">
+            <div class="fs-container-s2-image">
+              <img src="./img/s2.jpg" rel="hot spots" />
+            </div>
+            <div class="fs-container-s2-feature">
+              <h3>HOT SPOTS</h3>
+              <p>
+                The best experience comes when you unleash the fun<br>
+                We got the best fun activities as per your convience
+
+                <ul>
+                  <li>Trekking </li>
+                  <li>Mountain Biking </li>
+                  <li>Bonfire</li>
+                  <li>Camping</li>
+                </ul>
+              </p>
+              <a href="#">
+                <button type="button" class="btn ">
+                  Get the details
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!---Video--->
+      <section class="videoSection" id="videoSection">
+        <h2>Check out the beautiful valley </h2>
+        <div class="vS-container">
+          <video controls>
+            <source src="./vedio/videoplayback.mp4" type="video/mp4">
+          </video>
+          
+          </div>
+        </section>
+          
+          
+          
+            
+         
+      <!---Pricing--->
+      <section class="pricingSection" id="pricingSection">
+        <div class="card-container">
+          <div class="card-grid">
+            <a href="#formDetails">
+              <div class="card specialCard" data-tab="1">
+             
+                <div class="card-image">
+                  <img
+                    src="./img/cm-1.jpg"
+                    alt="Card 1 Image"
+                  />
+                </div>
+                <div class="card-text">
+                  <p class="ct-heading">₹3500</p>
+                  <ul>
+                    <li>Camping🏕️</li>
+                    <li>Hiking🚶‍♂️</li>
+                    <li>1 time meal free🥗</li>
+                  </ul>
+  
+                </div>
+              </div>
+              <div class="card" data-tab="2">
+                
+                <div class="card-image">
+                  <img
+                    src="./img/cm-2.jpg"
+                    alt="Card 2 Image"
+                  />
+                </div>
+                <div class="card-text">
+                  <p class="ct-heading">₹2500</p>
+                  <ul>
+                    <li>Camping🏕️</li>
+                    <li>Biking 🚵</li>
+                    <li><span class="highlight">50%</span> Discount on meals 🥗</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card" data-tab="3">
+                
+                <div class="card-image">
+                  <img
+                    src="./img/cm-3.jpg"
+                    alt="Card 3 Image"
+                  />
+                </div>
+                <div class="card-text">
+                  <p class="ct-heading">₹2000</p>
+                  <ul>
+                    <li>Camping🏕️</li>
+                    <li>Bonfire🔥</li>
+                    <li>Night snacks free 🍟</li>
+                  </ul>
+                </div>
+              </div>
+
+            </a>
+            
+          </div>
+        </div>
+      </section>
+      <!---Testimonial--->
+      <section class="testimonialSection" id="testimonialSection">
+        
+        <div class="tS-container">
+          
+          <div class="ts tS-container-t1">
+            <img rel="client-1" src="./img/t1.JPG" style="height: 5rem;width: 5rem;">
+            <h2>"The hospitality is top noch with amazing views"</h2>
+            <p>Ruchi</p>
+          </div>
+          <div class="ts tS-container-t2">
+            <img rel="client-1" src="./img/t2.JPG" style="height: 5rem;width: 5rem;">
+            <h2>"Activities,scouting,and the sublime view eveything is amazing "</h2>
+            <p>Shweta</p>
+          </div>
+          <div class="ts tS-container-t3">
+            <img rel="client-1" src="./img/t3.JPG" style="height: 5rem;width: 5rem;">
+            <h2>"Felt like paradise and the fun spots are amazing "</h2>
+            <p>Nikhil</p>
+          </div>
+          <div class="btnGrp">
+            <div class="previous"><ion-icon name="chevron-back-outline"></ion-icon></div>
+            <div class="next"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+            
+          </div>
+        
+
+        </div>
+      
+      </section>
+      
+      <hr>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footerContainer">
+          <div class="fC-logo">
+           
+              <img
+                src="./img/logo-2.png"
+                alt="Logo"
+                
+              />
+             
+            
+          </div>
+          <div class="fC-refernces">
+            <ul>
+              <li><a>Contacts</a></li>
+              <li><a>testimonials</a></li>
+              <li><a>Property Details</a></li>
+              <li><a>Site Map</a></li>
+              <li><a>Refer a friend</a></li>
+              <li><a>Legal</a></li>
+            </ul>
+          </div>
+          <div class="fC-socialmedia">
+            
+            <div class="fC-socialmedia-logos">
+              <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </div>
+           
+          </div>
+        </div>
+        <hr>
+        <div class="copyrights">
+          © Residential villa 2023
+          <ul>
+            <li>Privacy</li>
+            <li>Terms of use</li>
+            <li>Trademarks</li>
+          </ul>
+        </div>
+      </footer>
+      <div class="scroll-up"><a href="#"><ion-icon name="prism"></ion-icon></a></div>
+      
+    
+  </body>
+</html>
+               
+               
+               
+
+
+

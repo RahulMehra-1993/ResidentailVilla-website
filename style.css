@@ -78,6 +78,7 @@ background: linear-gradient(90deg, var(--teal), var(--danger));
 body {
   font-size: 62.5%;
   width: 100vw;
+  background-color: var(--danger-light);
 }
 
 .container-fluid {
@@ -105,7 +106,7 @@ body {
   /* background: linear-gradient(90deg, var(--teal), var(--danger)); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: -3rem;
+  margin-top: 1rem;
   animation: headerHighlighter 2s ease-in infinite;
 }
 @keyframes headerHighlighter {
@@ -125,8 +126,8 @@ body {
   background-color: var(--teal);
   position: fixed;
   font-size: 1.6rem;
-  padding: 0.5rem;
-  top: 0%;
+  padding: 0 1rem 0 1rem;
+  top: 2%;
   right: 0%;
   text-align: center;
   z-index: 100;
@@ -219,7 +220,7 @@ body {
   width: 100%;
   z-index: -1;
   /* background-color: var(--danger-light); */
-  background: linear-gradient(45deg, var(--teal-light), var(--danger-light));
+  background: linear-gradient(90deg, var(--teal-light), var(--danger-light));
   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
 }
 
@@ -227,7 +228,7 @@ body {
   /* background-color: var(--dark); */
 
   /* flex-grow: 2; */
-  font-family: var(--font-header);
+  font-family: var(--font-testimonial);
   font-size: 2.4rem;
   color: var(--gray);
 
@@ -320,7 +321,7 @@ body {
   width: 100%;
   z-index: -1;
   /* background-color: var(--danger-light); */
-  background: linear-gradient(45deg, var(--teal-light), var(--danger-light));
+  background: linear-gradient(90deg, var(--danger-light), var(--teal-light));
   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
 }
 
@@ -333,9 +334,10 @@ body {
 }
 .fs-container-s1-feature,
 .fs-container-s2-feature {
-  text-align: center;
   font-family: var(--font-header);
+  text-align: center;
 }
+
 .fs-container-s1-feature .btn {
   color: var(--teal-light);
   background-color: var(--teal-medium-light);
@@ -371,6 +373,7 @@ body {
   list-style: none;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  padding: 0;
   line-height: 2.4rem;
   background: linear-gradient(90deg, var(--danger), var(--teal));
   -webkit-background-clip: text;
@@ -608,7 +611,7 @@ body {
   height: 20rem;
   position: relative;
   transition: all 2s ease;
-
+  background: linear-gradient(45deg, var(--teal-light), var(--danger-light));
   overflow: hidden;
 }
 
@@ -621,16 +624,6 @@ body {
   height: 100%;
   position: absolute;
   transition: all 1s ease-in;
-}
-.ts::after {
-  position: absolute;
-  top: 0;
-  content: "";
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: linear-gradient(45deg, var(--teal-light), var(--danger-light));
-  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
 }
 
 .ts > img {
@@ -707,17 +700,18 @@ body {
 
 /* footer */
 footer {
-  margin-top: 1rem;
+  padding-top: 1rem;
   width: 100vw;
   margin: 0 auto;
   overflow: hidden;
+  background: var(--gray);
 }
 .footerContainer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 2rem;
   text-decoration: none;
-  color: var(--gray-dark);
+  color: var(--danger-light);
   justify-content: center;
   align-items: center;
   justify-items: center;
@@ -731,8 +725,8 @@ footer {
 }
 .fC-refernces {
   width: 100%;
-  border-left: 1px solid var(--gray);
-  border-right: 1px solid var(--gray);
+  border-left: 1px solid var(--danger-light);
+  border-right: 1px solid var(--danger-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -778,12 +772,15 @@ footer {
   color: inherit;
   font-size: 1.4rem;
 }
+hr {
+  color: var(--danger-light);
+}
 .copyrights {
   display: flex;
   text-align: center;
   justify-content: center;
   font-size: 14px;
-  color: var(--secondary);
+  color: var(--danger-light);
 }
 
 .copyrights > ul {
@@ -910,12 +907,12 @@ footer {
   .fS-container {
     gap: 2rem !important;
   }
-  .tS-container {
-    transform: scale(0.8);
-  }
 
   .btnGrp {
     gap: 10rem;
+  }
+  .card-container {
+    padding: 2rem;
   }
 
   .card-grid a {
@@ -923,9 +920,17 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
   }
+  .ts > h2,
+  .ts > p {
+    font-size: 1rem;
+  }
+  .ts > img {
+    height: 4rem !important;
+    width: 4rem !important;
+  }
 
   .fC-logo > img {
-    height: 6rem;
+    height: 4rem;
   }
   .fC-refernces {
     border: none;
@@ -937,10 +942,13 @@ footer {
     gap: 0rem;
     row-gap: 1rem;
   }
+  .fC-refernces > ul > * {
+    font-size: 14px;
+  }
   .fC-socialmedia-logos > * {
     text-decoration: none;
     color: inherit;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .copyrights {

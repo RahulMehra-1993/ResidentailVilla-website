@@ -177,7 +177,6 @@ const featureSectionImage3 = document.querySelector(".fs-container-s1-image3");
 const featureSectionImage4 = document.querySelector(".fs-container-s1-image4");
 const mobileNav = document.querySelector(".mobileNav");
 // scroll-up
-const scrollUp = document.querySelector(".scroll-up");
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -186,12 +185,10 @@ const obs = new IntersectionObserver(
 
     if (ent.isIntersecting === false) {
       mobileNav.style.opacity = 1;
-      scrollUp.classList.remove("hidden");
     }
 
     if (ent.isIntersecting === true) {
       mobileNav.style.opacity = 0;
-      scrollUp.classList.add("hidden");
     }
   },
   {

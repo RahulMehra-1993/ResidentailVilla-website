@@ -1,6 +1,7 @@
 #ResidentialVilla-website
 
 ![webiste]("./img/siteSS.png")
+<img src="https://github.com/RahulMehra-1993/ResidentailVilla-website/blob/master/img/siteSS.png" width="400" >
 
 ##A Tour and travel website to book beautiful villas in the himalayans
 ###Core features of this website

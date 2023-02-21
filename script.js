@@ -238,3 +238,13 @@ const obs2 = new IntersectionObserver(
   }
 );
 obs2.observe(featureSection);
+// map
+const mapLink = document.querySelector(".mapLink");
+const mapClose = document.querySelector(".mapClose");
+const map = document.querySelector(".map");
+mapLink.addEventListener("click", function () {
+  map.classList.remove("hidden");
+});
+mapClose.addEventListener("click", function () {
+  map.classList.add("hidden");
+});

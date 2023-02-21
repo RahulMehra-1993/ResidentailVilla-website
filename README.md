@@ -1,11 +1,13 @@
 # ResidentialVilla-website
 
+##Dekstop and Mobile versions
 <img src="./img/siteSS.png" width="100%">
+<img src="./img/mobileSS.png" width="50%"> <img src="./img/mobileSS-2.png" width="50%">
 https://rahulmehra-1993.github.io/ResidentailVilla-website/
 
-## A Tour and travel website to book beautiful villas in the himalayans.
+### A Tour and travel website to book beautiful villas in the himalayans.
 
-### Core features of this website.
+#### Core features of this website.
 
 > 1.Designing different Sections of the website.
 > 2.Using integration of bootstrap to create form and buttons to collect data

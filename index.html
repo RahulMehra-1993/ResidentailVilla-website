@@ -49,20 +49,20 @@
             <div class="navClose hidden">×</div>
             <div class="navList2 hidden" id="navList2">
               <ul>
-                <li href="#"><a>Contacts</a></li>
+                <li ><a href="#heroSection">Contacts</a></li>
                 <li>
                   <a href="#featureSection">Features</a>
                 </li>
                   <li><a href="#videoSection">Video</a></li>
-                  <li><a href="#testimonialSection">Testimonials</a></li>
                   <li><a href="#pricingSection">Pricing</a></li>
+                  <li><a href="#testimonialSection">Testimonials</a></li>
               </ul>
             </div>
           </div>
         </div>
       </header>
       <!---Hero--->
-      <section class="heroSection">
+      <section class="heroSection" id="heroSection">
         <div class="hS-container">
           <div class="hS-container-header">
             <p>
@@ -176,7 +176,7 @@
       <section class="videoSection" id="videoSection">
         <h2>Check out the beautiful valley </h2>
         <div class="vS-container">
-          <video controls>
+          <video controls controlslist="nodownload">
             <source src="./vedio/videoplayback.mp4" type="video/mp4">
           </video>
           </div>
@@ -267,6 +267,12 @@
       </section>
       <!--footer-->
       <footer class="footer">
+        <div class="map hidden">
+          <div class="mapClose ">×</div>
+          <div class="gmap_canvas">
+            <iframe  id="gmap_canvas" src="https://maps.google.com/maps?q=triund&t=&z=10&ie=UTF8&iwloc=&output=embed" ></iframe>
+          </div>
+        </div>
         <div class="footerContainer">
           <div class="fC-logo">
             <img
@@ -279,20 +285,20 @@
                 <li><a>Contacts</a></li>
                 <li><a>testimonials</a></li>
                 <li><a>Property Details</a></li>
-                <li><a>Site Map</a></li>
+                <li><a class="mapLink">Site Map</a></li>
                 <li><a>Refer a friend</a></li>
                 <li><a>Legal</a></li>
               </ul>
             </div>
             <div class="fC-socialmedia">
               <div class="fC-socialmedia-logos">
-                <a href="#">
+                <a href="https://www.facebook.com/" target="_blank">
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/login?lang=en" target="_blank">
                   <ion-icon name="logo-twitter"></ion-icon>
                 </a>
-                <a href="#">
+                <a href="https://www.youtube.com/results?search_query=triund+camping" target="_blank">
                   <ion-icon name="logo-youtube"></ion-icon>
                 </a>
               </div>
@@ -302,9 +308,8 @@
           <div class="copyrights">
             © Residential villa 2023
             <ul>
-              <li>Privacy</li>
-              <li>Terms of use</li>
-              <li>Trademarks</li>
+              <li>Only for learning purpose</li>
+              <li>Created by &nbsp;<a href="https://github.com/RahulMehra-1993/ResidentailVilla-website" target="_blank">RahulMehra-1993</a></li>
             </ul>
           </div>
         </footer>

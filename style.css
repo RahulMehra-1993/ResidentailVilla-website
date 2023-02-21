@@ -67,6 +67,23 @@ background: linear-gradient(90deg, var(--teal), var(--danger));
 .hidden {
   display: none !important;
 }
+/* error */
+@keyframes error {
+  0% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+.error {
+  animation: error 1 ease 0.1s;
+  border: 1px solid var(--danger);
+}
 * {
   margin: 0;
   padding: 0;
@@ -95,6 +112,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+.logo > a > img {
+  height: 6rem;
+  width: auto;
 }
 .logo > h1 {
   font-family: var(--font-header);
@@ -373,6 +394,9 @@ body {
   aspect-ratio: 1/1;
   height: 25rem;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.lazy-img {
+  filter: blur(2px);
 }
 .fs-container-s1-image {
   position: relative;

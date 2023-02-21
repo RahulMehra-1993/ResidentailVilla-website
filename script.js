@@ -1,5 +1,4 @@
 "use strict";
-
 console.log("connected");
 const img = Array.from(document.querySelectorAll(".ts"));
 const next = document.querySelector(".next");
@@ -11,7 +10,6 @@ const play = document.querySelector(".play");
 const navShort = document.querySelector(".navShort");
 const navClose = document.querySelector(".navClose");
 const navList2 = document.querySelector(".navList2");
-
 console.log(img);
 //login inputs
 const btn = document.querySelector(".btn");
@@ -22,11 +20,12 @@ const address = document.getElementById("address");
 const city = document.getElementById("city");
 const premium = document.getElementById("premium");
 const formDetails = document.querySelector(".formDetails");
+const inputs = Array.from(document.querySelectorAll("input"));
+console.log(inputs);
+const error = document.querySelector(".error");
 const formSubmitt = document.querySelector(".formSubmitt");
 //
-
 //nav function for mobile devices
-
 navShort.addEventListener("click", function (e) {
   console.log("nav short btn clicked");
   console.log(navList);
@@ -40,9 +39,7 @@ navClose.addEventListener("click", function () {
   navShort.classList.remove("hidden");
   navClose.classList.add("hidden");
 });
-
 ///
-
 let render = function () {
   formDetails.classList.add("hidden");
   formSubmitt.classList.remove("hidden");
@@ -62,11 +59,30 @@ btn.addEventListener("click", function (e) {
     city.value,
     premium.value
   );
-  if (userName.value != "" && mobile.value != "") {
+  if (
+    email.value != "" &&
+    mobile.value != "" &&
+    address.value != "" &&
+    city.value != "" &&
+    premium.value != ""
+  ) {
     render();
+    const timeout1 = setTimeout(function () {
+      email.value =
+        mobile.value =
+        address.value =
+        city.value =
+        premium.value =
+          "";
+    }, 1000);
+    timeout1;
+  } else {
+    inputs.forEach((x) => x.classList.add("error"));
   }
-
-  email.value = mobile.value = address.value = city.value = premium.value = "";
+  const timeout2 = setTimeout(function () {
+    inputs.forEach((y) => y.classList.remove("error"));
+  }, 1000);
+  timeout2;
 });
 
 let counter = 0;
@@ -79,18 +95,14 @@ const loop = function (counter) {
     x.style.transform = `translateX(${100 * (y - counter)}%)`;
   });
 };
-
 /////initalizations
 let PageInit = function () {
   loop(counter);
   previous.style.opacity = 0;
 };
 PageInit();
-
 //////////
-
 console.log(`half of the array : ${counter / 2}`);
-
 let nextSlide = function () {
   if (counter < maxCounter) {
     counter++;
@@ -103,7 +115,6 @@ let nextSlide = function () {
   console.log("next button clicked");
   loop(counter);
 };
-
 let previousSlide = function () {
   if (counter > 0) {
     counter--;
@@ -117,9 +128,7 @@ let previousSlide = function () {
   console.log("previous button clicked");
   loop(counter);
 };
-
 //actions
-
 next.addEventListener("click", function () {
   previous.style.opacity = 0;
   next.style.opacity = 1;
@@ -127,10 +136,8 @@ next.addEventListener("click", function () {
     next.style.opacity = 0;
     previous.style.opacity = 1;
   }
-
   nextSlide();
 });
-
 previous.addEventListener("click", function () {
   previous.style.opacity = 1;
   next.style.opacity = 0;
@@ -138,10 +145,8 @@ previous.addEventListener("click", function () {
     previous.style.opacity = 0;
     next.style.opacity = 1;
   }
-
   previousSlide();
 });
-
 // document.addEventListener("keydown", function (e) {
 //   e.preventDefault();
 //   console.log(e);
@@ -151,11 +156,9 @@ previous.addEventListener("click", function () {
 //     previousSlide();
 //   }
 // });
-
 // smooth scrolling
 const allLinks = document.querySelectorAll("a");
 console.log(allLinks);
-
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     // e.preventDefault();
@@ -176,7 +179,6 @@ const featureSectionImage2 = document.querySelector(".fs-container-s1-image2");
 const featureSectionImage3 = document.querySelector(".fs-container-s1-image3");
 const featureSectionImage4 = document.querySelector(".fs-container-s1-image4");
 const mobileNav = document.querySelector(".mobileNav");
-// scroll-up
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -198,27 +200,41 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+//trial of data-src image
+const cardIimages = document.querySelectorAll(".card-image");
+const fsS2Image = document.querySelector(".fs-container-s2-image");
+const imgTargets = Array.from(document.querySelectorAll("img[data-src]"));
+console.log(imgTargets);
+//
 const obs2 = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
-
+    console.log(ent.target);
     if (ent.isIntersecting === false) {
       featureSectionImage2.classList.remove("animation2");
       featureSectionImage3.classList.remove("animation3");
       featureSectionImage4.classList.remove("animation4");
-    }
+      imgTargets.forEach((img) => (img.src = img.src));
 
+      cardIimages.forEach((cardImage) =>
+        cardImage.classList.remove("lazy-img")
+      );
+      fsS2Image.classList.add("lazy-img");
+    }
     if (ent.isIntersecting === true) {
       featureSectionImage2.classList.add("animation2");
       featureSectionImage3.classList.add("animation3");
       featureSectionImage4.classList.add("animation4");
+      imgTargets.forEach((img) => (img.src = img.dataset.src));
+
+      cardIimages.forEach((cardImage) => cardImage.classList.add("lazy-img"));
+      fsS2Image.classList.remove("lazy-img");
     }
   },
   {
     root: null,
     threshold: 0,
-    rootMargin: "-40px",
+    rootMargin: "-100px",
   }
 );
 obs2.observe(featureSection);
